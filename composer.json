@@ -1,0 +1,8 @@
+{
+    "autoload": {
+        "classmap": 
+        [
+        	"UserCommander.php"
+        ]
+    }
+}
