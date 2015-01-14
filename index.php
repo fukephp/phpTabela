@@ -1,10 +1,13 @@
-<?php require "vendor/autoload.php" ?>
-<?php $users = new UserCommander(); ?>
+<?php require "vendor/autoload.php";
+    $users = new UserCommander();
+    $orderBy = new OrderByCommander();
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Testni zadatak</title>
+    <meta charset="UTF-8">
 	<link rel="stylesheet" type="text/css" href="public/css/main.css">
 </head>
 <body>
@@ -25,8 +28,9 @@
 				<thead>
 				<tr>
 					<th>
-						Ime
+                        <a href="?orderBy=<?php echo $orderBy->startOrder(); ?>">Ime
 						<span class="arrow_up"></span>
+                        </a>
 					</th>
 
 					<th>
@@ -48,6 +52,7 @@
 				</tr>
 				</thead>
 				<tbody>
+
 				<?php foreach($users->getUsersObjects() as $user) :  ?>
 					<tr>
 					    <td><?php echo $user->name  		?></td>
@@ -57,6 +62,7 @@
 					    <td><?php echo $user->employed  	?></td>	
 					</tr>
 				<?php endforeach; ?>
+
 				</tbody>
 			</table>
 		</div>

@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'OrderByCommander' => $baseDir . '/OrderByCommander.php',
     'UserCommander' => $baseDir . '/UserCommander.php',
 );
